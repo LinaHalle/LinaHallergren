@@ -1,0 +1,65 @@
+/* compensate for header fixed (hiding parts of main) by adding padding-top to main */
+
+main {
+  padding-top: var(--header-height);
+
+  @media (max-width: 575px) {
+    :root {
+      --header-height: 68px;
+    }
+  }
+}
+
+header{
+
+  /* this is to have a static header that always shows*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+
+  background-color: #FAF9F6;
+  padding: 20px;
+
+  nav{
+    /* float fix makes an element in nav that have float still takes up space */
+    /* display: flow-root; */
+
+  a {
+      color: #1E1E1E;
+      text-decoration: none;
+      display: block;
+      float: left;
+      padding: 0 20px;
+      position: relative;
+
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+
+      /* if the user hovers with their mouse pointer */
+      &:hover {
+        color: #8B8A70;
+      }
+    }
+
+  }
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #8B8A70;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}

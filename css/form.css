@@ -1,0 +1,74 @@
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  /* box-sizing: border-box; noramlly used but we already have it on all elements*/ 
+}
+
+label:not(label[for="menu-toggle"]) {
+  margin-bottom: 15px;
+}
+
+label:not(label[for="menu-toggle"]), 
+input:not([type="checkbox"], [type="radio"]),
+textarea {
+  display:block;
+  width: 100%;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* attribut selector, *innehåller,^börjar med, $slutar med */
+button[type="submit"]{
+  float: inline-end;
+  padding: 2px 30px;
+  /* set pointer as a hand when hovering */
+  cursor: pointer;
+}
+
+/* let lables be on the same line as their radiobutton in a group of radiobuttons */
+/* .radio-button-group label {
+  label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+} */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  padding: 0.5em 0.75em;
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+
+.radio-button-group {
+  p {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  label {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}

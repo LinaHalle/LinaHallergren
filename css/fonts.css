@@ -1,0 +1,86 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+
+body {
+  /* background-color: rgba(213, 214, 168, 0.845); */
+  background-color: #CEC8A6;
+  color: #1E1E1E;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 140%;
+  font-size: 20px;
+  /* when we use 100vw for elements (like we do for hero images)
+       that is including the vertical scroll-bar which means
+       the page doesn't fit horisontally and gets a horizontal scrollbar...
+       we fix this by hiding the horizontal overflow -
+       (this hides around 17px of the image but that's mostly undetectable)
+       - no more horizontal scrollbar!
+    */
+    overflow-x: hidden;
+}
+
+
+ h1 {
+   font-family: 'Playfair Display', serif;
+   font-size: 3rem;
+   line-height: 1.3;
+   font-weight: 400;
+   margin-bottom: 1rem;
+ }
+
+ h2 {
+   font-family: 'Playfair Display', serif;
+   font-size: 2rem;
+   font-weight: 400;
+   line-height: 1.3;
+   margin-bottom: 0.8rem;
+ }
+
+ h3 {
+    font-family: 'Playfair Display', serif;
+      /* samma eleganta serif */
+      font-weight: 400;
+      /* lättare vikt */
+      line-height: 1.3;
+      /* luftig mellanrad */
+      margin-top: 1rem;
+      /* lite avstånd ovanför */
+      margin-bottom: 0.5rem;
+      /* lite avstånd under */
+      color: #1E1E1E;
+ }
+
+ nav a {
+   font-family: 'Inter', sans-serif;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   font-size: 0.8rem;
+ }
+
+ p {
+   font-family: 'Inter', sans-serif;
+   font-size: 1rem;
+   line-height: 1.7;
+   margin-top: 0;
+ }
+
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size: 30px;
+  padding-bottom: 10px;
+  color: #1E1E1E;
+}
+
+li {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 0;
+}

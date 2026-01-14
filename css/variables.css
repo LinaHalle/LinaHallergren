@@ -1,0 +1,8 @@
+/* dry om man istället för att sätta samma färg på flera ställen kan skriva backgroundcolor: var variablenamn men funkar inte för mig av någon anledning 
+:root {
+  --header-footer-background: rgb(51, 68, 54);
+} */
+
+:root {
+  --header-height: 106px;
+}

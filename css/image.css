@@ -1,0 +1,85 @@
+/* main img:not(.small-picture){
+  width: 100%;
+} */
+
+.start-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 20px;
+  flex-wrap: wrap;
+}
+
+img.small-picture {
+  @media(min-width:768px){
+    margin-top: -80px;
+    order: 2;
+  }
+  width: 150px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .45);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.start-text {
+  flex:1;
+  min-width: 250px;;
+}
+
+/* Responsive: stack image on top for small screens */
+@media (max-width: 768px) {
+  .start-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .start-text {
+    min-width: auto;
+  }
+
+  img.small-picture {
+    margin-bottom: 20px;
+  }
+}
+
+/* A "full bleed"/hero image that takes the whole viewport width */
+img.hero {
+  object-fit: cover;
+
+  display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  aspect-ratio: 25/5;
+
+  @media (max-width: 800px) {
+    aspect-ratio: 16/8;
+  }
+
+  @media (max-width: 450px) {
+    aspect-ratio: 10/7;
+  }
+}
+
+/* Get heading (h1) after hero image to be positioned on top of the image
+   with a shadow that makes the text stand out across most images
+*/
+img.hero+h1 {
+  margin-top: -120px;
+  margin-bottom: 100px;
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 0 0 20px rgba(0, 0, 0, .65), 0 0 40px rgba(0, 0, 0, .45), 0 2px 4px rgba(0, 0, 0, .75);
+
+  @media (max-width: 800px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 40px;
+  }
+}

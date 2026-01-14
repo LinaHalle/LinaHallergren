@@ -1,0 +1,23 @@
+main {
+/* set the width to what's smallest of 100% of parent (body) width - same as viewport or 900px */
+width: min(900px, 100%);
+
+/* always som space to viewport edges */
+margin: 0 auto;
+padding: 0 20px 20px;
+padding-top: var(--header-height);
+}
+
+/* shorthand for margin and padding 
+instead of writing seperate margin-top, margin-left.. 
+padding: 20px (all sides) 
+padding: 10px 20px top/buttom, left/right */
+
+/* start section layout */
+#Start {
+  /*display: grid;*/
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2.5rem;
+}
+
